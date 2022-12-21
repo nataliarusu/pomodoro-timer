@@ -1,0 +1,21 @@
+:root{
+    --bg-colour: #3a4657;
+    --main-colour: white;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background: var(--bg-colour);
+    color: var(--main-colour);
+}
+.pomodoro-timer-settings-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#customize-pomodoro-form input{
+    background: inherit;
+    color: inherit;
+}
