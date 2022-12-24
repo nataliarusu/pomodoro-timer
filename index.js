@@ -36,7 +36,7 @@ const existTimer = JSON.parse(
 if (existTimer) {
   createInitialTimer(existTimer.work / 60, existTimer.break / 60);
 } else {
-  createInitialTimer(1, 2);
+  createInitialTimer(25, 5);
 }
 
 timerActionBtn.addEventListener('click', timerStartStop);
