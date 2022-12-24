@@ -6,7 +6,7 @@ const minutesEl = timerContainer.querySelector('.minutes');
 const secondsEl = timerContainer.querySelector('.seconds');
 const displaySettingsEl = document.querySelector('.about-pomodoro-timer');
 const currentModeDisplayEl = document.querySelector('.current-mode');
-const sound = new Audio('./alarm.mp3');
+const sound = new Audio('https://github.com/nataliarusu/pomodoro-timer/blob/main/src/alarm.mp3');
 export class Timer {
   constructor(workTime, breakTime) {
     this.work = Number(workTime) * 60; //work time in seconds
