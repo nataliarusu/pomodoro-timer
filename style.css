@@ -1,21 +1,67 @@
 :root{
-    --bg-colour: #3a4657;
+    --dark-bg-colour: #212e41;
+    --light-bg-colour: #3a4657;
     --main-colour: white;
+    --purple: #3d2e66;
+    --dark-purple: #1c1147;
 }
 *{
     box-sizing: border-box;
 }
 body{
-    background: var(--bg-colour);
+    background: var(--dark-bg-colour);
     color: var(--main-colour);
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
 }
 .pomodoro-timer-settings-btn{
     background: none;
     border: none;
     cursor: pointer;
 }
-
+.customize-pomodoro-container{
+    width: 18rem;
+    border: 3px solid var(--purple);
+    padding: 1rem;
+    border-radius: 5px;
+    display: none;
+    background: var(--light-bg-colour);
+}
+#customize-pomodoro-form{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    width: 11rem;
+}
+#customize-pomodoro-form > *{
+    display: flex;
+    justify-content: space-between;
+}
 #customize-pomodoro-form input{
     background: inherit;
     color: inherit;
+    width: 4rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#customize-pomodoro-form .form-btn{
+    width: 70%;
+    justify-content: center;
+    background: var(--purple);
+    color: var(--main-colour);
+    font-weight: 600;
+    padding: 0.4rem;
+    border: 1px solid var(--dark-purple);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#customize-pomodoro-form .form-btn:hover{
+    box-shadow: inset 0px 0px 15px 5px var(--dark-purple);
+}
+.visible{
+    display: block;
 }

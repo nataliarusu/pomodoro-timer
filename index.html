@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./index.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" type="module" defer></script>
     <title>Pomodoro timer</title>
-</head>
-<body>
-    <h1>PT</h1>
-    <div class="pomodoro-timer-settings">
+  </head>
+  <body>
+    <div class="root">
+      <h1>PT</h1>
+      <div class="pomodoro-timer-settings">
         <button class="pomodoro-timer-settings-btn">
-            <img src="./images/icon-gears.png" alt="pomodoro button image">
+          <img src="./images/icon-gears.png" alt="pomodoro button image" />
         </button>
         <div class="customize-pomodoro-container">
-            <form id="customize-pomodoro-form">
-                <label for="work-duration">Work duration</label>
-                <input type="number" id="work-duration" name="work-duration">
-                <label for="break-duration">Break duration</label>
-                <input type="number" id="break-duration" name="break-duration">
-                <button class="form-btn">Apply</button>
-            </form>
+          <form id="customize-pomodoro-form" class="center">
+            <div>
+              <label for="work-duration">Work time</label>
+              <input
+                type="number"
+                id="work-duration"
+                name="work-duration"
+                min="1"
+                value="25"
+              />
+              <span>min</span>
+            </div>
+            <div>
+              <label for="break-duration">Break time</label>
+              <input
+                type="number"
+                id="break-duration"
+                name="break-duration"
+                min="1"
+                value="5"
+              />
+              <span>min</span>
+            </div>
+            <button class="form-btn center">Apply</button>
+          </form>
         </div>
-    </div>
-    <div class="pomodoro-timer">
+      </div>
+      <div class="pomodoro-timer">
+        <p class="about-pomodoro-timer">This is....</p>
         <div class="pomodoro-timer-time" data-type="work">
-            <div class="work-time"><span class="minutes">25</span>:<span class="seconds">00</span></div>
+          <div class="work-time">
+            <span class="minutes">25</span>:<span class="seconds">00</span>
+          </div>
         </div>
         <div class="pomodoro-timer-btns">
-            <button class="pomodoro-timer-btn start">Start</button>
-            <button class="pomodoro-timer-btn cancel">Cancel</button>
+          <button class="pomodoro-timer-btn actions-btn" data-action="start">
+            Start
+          </button>
+          <button class="pomodoro-timer-btn reset-btn">Reset</button>
         </div>
-       
-
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
