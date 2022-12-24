@@ -10,7 +10,8 @@ const customizeTimerHandler = (e)=>{
     const break_duration = e.target.querySelector('#break-duration').value;
     globalContext.timer.stopTimer();
     globalContext.timer = new Timer(work_duration, break_duration); 
-    console.log(globalContext.timer)
+    globalContext.timer.displaySettings();
+    toggleSettingsForm();
 }
 
 export const toggleSettingsForm=()=>{

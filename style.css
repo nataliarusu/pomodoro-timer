@@ -4,6 +4,9 @@
     --main-colour: white;
     --purple: #3d2e66;
     --dark-purple: #1c1147;
+    --light-purple: #673ab7;
+    --light-blue: #2195f2;
+    --green: #21f222;
 }
 *{
     box-sizing: border-box;
@@ -15,6 +18,13 @@ body{
 .center{
     margin-left: auto;
     margin-right: auto;
+}
+.pomodoro-timer-settings{
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    position: relative;
 }
 .pomodoro-timer-settings-btn{
     background: none;
@@ -28,6 +38,9 @@ body{
     border-radius: 5px;
     display: none;
     background: var(--light-bg-colour);
+    position: absolute;
+    top: 50px;
+    right: 0;
 }
 #customize-pomodoro-form{
     display: flex;
@@ -64,4 +77,37 @@ body{
 }
 .visible{
     display: block;
+}
+
+.pomodoro-timer{
+    border: 10px solid var(--light-purple);
+    max-width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    
+}
+
+.current-mode,
+.pomodoro-timer-time{
+    font-size: 4rem;
+    margin: 0;
+}
+.pomodoro-timer-btns > *{
+    width: 100px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.break{
+    color: var(--light-blue);
+}
+
+.work{
+    color: var(--green);
 }

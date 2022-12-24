@@ -10,8 +10,8 @@
   </head>
   <body>
     <div class="root">
-      <h1>PT</h1>
       <div class="pomodoro-timer-settings">
+        <p class="about-pomodoro-timer"></p>
         <button class="pomodoro-timer-settings-btn">
           <img src="./images/icon-gears.png" alt="pomodoro button image" />
         </button>
@@ -24,7 +24,6 @@
                 id="work-duration"
                 name="work-duration"
                 min="1"
-                value="25"
               />
               <span>min</span>
             </div>
@@ -35,7 +34,6 @@
                 id="break-duration"
                 name="break-duration"
                 min="1"
-                value="5"
               />
               <span>min</span>
             </div>
@@ -43,8 +41,8 @@
           </form>
         </div>
       </div>
-      <div class="pomodoro-timer">
-        <p class="about-pomodoro-timer">This is....</p>
+      <div class="pomodoro-timer center">
+        <p class="current-mode work">WORK</p>
         <div class="pomodoro-timer-time" data-type="work">
           <div class="work-time">
             <span class="minutes">25</span>:<span class="seconds">00</span>
@@ -52,9 +50,9 @@
         </div>
         <div class="pomodoro-timer-btns">
           <button class="pomodoro-timer-btn actions-btn" data-action="start">
-            Start
+            START
           </button>
-          <button class="pomodoro-timer-btn reset-btn">Reset</button>
+          <button class="pomodoro-timer-btn reset-btn">RESET</button>
         </div>
       </div>
     </div>
